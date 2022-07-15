@@ -1,0 +1,53 @@
+GET http://localhost:3001/api/persons
+
+
+###
+GET http://localhost:3001/api/persxxxx
+
+###
+GET http://localhost:3001/api/persons/434553
+
+###
+GET http://localhost:3001/api/persons/62c9abdd162daa3d35727eab
+
+###
+GET http://localhost:3001/info
+
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Rma ROO",
+    "number": "011-333-22245"
+}
+
+###
+PUT http://localhost:3001/api/persons/62c99305af381761230a0d6e
+Content-Type: application/json
+
+{
+    "name": "Rma ROO",
+    "number": "111111111"
+}
+
+
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "number": "046-673-2245"
+}
+
+
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Romera"
+}
+
+###
+DELETE http://localhost:3001/api/persons/62c959463d67115da7268fc1
