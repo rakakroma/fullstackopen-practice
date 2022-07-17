@@ -1,0 +1,80 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9odGF0YTMzMzMiLCJpZCI6IjYyZDFkYWQ2OThmYjM5NDc5ZGMwZjI0MyIsImlhdCI6MTY1ODAxNzAzOH0.YV6of9F9We7QVeDAMu_TzrF1-sqebl306LAZb-uCHI4
+
+
+{
+        "title": "new_test",
+        "author": "MM",
+        "url": "www.y2ahoo.jp",
+        "likes": 666445
+}
+
+###
+GET http://localhost:3003/api/blogs/62d1dabf98fb39479dc0f23b
+
+###
+DELETE http://localhost:3003/api/blogs/62d3686bb762a946b4c25689
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9odGF0YTMzMzMiLCJpZCI6IjYyZDFkYWQ2OThmYjM5NDc5ZGMwZjI0MyIsImlhdCI6MTY1ODAxNzAzOH0.YV6of9F9We7QVeDAMu_TzrF1-sqebl306LAZb-uCHI4
+
+### wrong token
+DELETE http://localhost:3003/api/blogs/62d3578877dd5384ea54fe8e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+### wrong user
+DELETE http://localhost:3003/api/blogs/62d1dabc98fb39479dc0f237
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9odGF0YTMzMzMiLCJpZCI6IjYyZDFkYWQ2OThmYjM5NDc5ZGMwZjI0MyIsImlhdCI6MTY1ODAxNzAzOH0.YV6of9F9We7QVeDAMu_TzrF1-sqebl306LAZb-uCHI4
+
+### wrong blog id
+DELETE http://localhost:3003/api/blogs/62d357db201a11d9f55192a3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+### send blog without title
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9odGF0YTMzMzMiLCJpZCI6IjYyZDNhYmU5OWExMTc3M2ZiMTA3MWZiNiIsImlhdCI6MTY1ODAzOTI4NH0.sLv3lI9GdHRieLYE74PkulK0HgQtkcnQZ2vr-eoWlUs
+
+{
+        "author": "Kevib",
+        "url": "www.eeeeeeee.jp",
+        "likes": 777
+}
+
+
+###
+GET http://localhost:3003/api/blogs
+
+
+###
+GET http://localhost:3003/api/users
+
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+        "name":"Ohtani",
+        "username":"ohtata3333",
+        "password":"8753kk24"
+}
+
+
+###
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+        "username":"ohtata3333",
+        "password":"8753kk24"
+}
+
+### wrong password
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+        "username":"ohtata3333",
+        "password":"3ssdv"
+}
+
+###
