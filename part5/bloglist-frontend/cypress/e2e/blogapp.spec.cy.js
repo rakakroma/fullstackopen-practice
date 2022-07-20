@@ -142,7 +142,7 @@ describe('Note app', function () {
 
         })
 
-        it.only('sort blogs by likes count', function () {
+        it('sort blogs by likes count', function () {
 
           cy.get('.blog-post').eq(0).contains('test blog 1 Tanaka')
 
